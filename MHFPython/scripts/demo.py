@@ -10,7 +10,7 @@ from scipy import *
 from matplotlib.pyplot import *
 from MHFPython import *
 from plotGaussians import *
-from actualdist import *
+#from actualdist import *
 import time
 import os
 

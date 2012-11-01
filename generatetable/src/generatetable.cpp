@@ -397,7 +397,7 @@ int main(int argc, char *argv[]) {
 	ostream* hypothesisout;
 	if(filename=="")	hypothesisout=&cout;
 	else {
-		the_file.open(filename);
+		the_file.open(filename.c_str());
 		hypothesisout=&the_file;
 	}
 

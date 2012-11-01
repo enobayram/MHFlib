@@ -9,13 +9,9 @@
 #include <iostream>
 #include <eigen3/Eigen/Dense>
 #include "SplitTable.h"
-#include <boost/lambda/lambda.hpp>
-#include <boost/lambda/bind.hpp>
-#include <boost/lambda/construct.hpp>
 #include "iau_ukf_eigen.hpp"
 
 using std::cout;
-using namespace boost::lambda;
 
 void testUKF();
 
@@ -38,8 +34,6 @@ int main(int argc, char **argv) {
 	BOOST_FOREACH(GaussianHypothesis<3> & g, splittedList) {
 		cout<<g<<"\n";
 	}
-	splittedList.clear_and_dispose(bind(delete_ptr(), _1));
-	//cout<<	table.table.lower_bound(1.3)->first;
 	testUKF();
 }
 
